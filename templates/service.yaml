@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "better-db.fullname" . }}
+  labels:
+    app: {{ template "better-db.name" . }}
+    chart: {{ template "better-db.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: 443
+      targetPort: 8443
+      protocol: TCP
+      name: tls-port
+  selector:
+    app: {{ template "better-db.name" . }}
+    release: {{ .Release.Name }}
