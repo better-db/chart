@@ -14,8 +14,8 @@ spec:
       targetPort: 8443
       protocol: TCP
       name: tls-port
-    - port: 9100
-      targetPort: 9100
+    - port: 9200
+      targetPort: 9200
       protocol: UDP
       name: udp-port
   selector:
