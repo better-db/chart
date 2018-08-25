@@ -14,10 +14,10 @@ spec:
       targetPort: 8443
       protocol: TCP
       name: tls-port
-    - port: 9200
-      targetPort: 9200
-      protocol: UDP
-      name: udp-port
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+      name: http-port
   selector:
     app: {{ template "better-db.name" . }}
     release: {{ .Release.Name }}
