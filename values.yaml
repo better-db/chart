@@ -6,15 +6,12 @@ replicaCount: 1
 
 image:
   repository: nginx
-  tag: 1.15.1
+  tag: 1.15.0
   pullPolicy: IfNotPresent
 
 service:
   type: ClusterIP
   port: 80
-
-securityContext:
-  allowPrivilegeEscalation: true
 
 ingress:
   enabled: false
