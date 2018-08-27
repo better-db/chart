@@ -29,14 +29,12 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /healthz
+              path: /
               port: http
           readinessProbe:
             httpGet:
               path: /
               port: http
-          securityContext:
-            allowPrivilegeEscalation: {{ .Values.securityContext.allowPrivilegeEscalation }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
