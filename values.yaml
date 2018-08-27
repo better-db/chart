@@ -13,8 +13,8 @@ service:
   type: ClusterIP
   port: 80
 
-# securityContext:
-#   allowPrivilegeEscalation: true
+securityContext:
+  allowPrivilegeEscalation: true
 
 ingress:
   enabled: false
