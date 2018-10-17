@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: {{ template "better-db.fullname" . }}
   labels:
+    this: is-not-it
     app: {{ template "better-db.name" . }}
     chart: {{ template "better-db.chart" . }}
     release: {{ .Release.Name }}
