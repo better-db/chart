@@ -11,7 +11,7 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: 443
+    - port: 8443
       targetPort: 8443
       protocol: TCP
       name: tls-port
