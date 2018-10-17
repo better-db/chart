@@ -6,6 +6,7 @@ kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
+    something: else
     app: {{ template "better-db.name" . }}
     chart: {{ template "better-db.chart" . }}
     release: {{ .Release.Name }}
