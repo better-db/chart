@@ -4,6 +4,7 @@ metadata:
   name: {{ template "better-db.fullname" . }}
   labels:
     something: else
+    and: more
     app: {{ template "better-db.name" . }}
     chart: {{ template "better-db.chart" . }}
     release: {{ .Release.Name }}
