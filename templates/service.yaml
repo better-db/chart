@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: {{ template "better-db.fullname" . }}
   labels:
-    something: else
     app: {{ template "better-db.name" . }}
     chart: {{ template "better-db.chart" . }}
     release: {{ .Release.Name }}
@@ -16,7 +15,7 @@ spec:
       protocol: TCP
       name: tls-port
     - port: 80
-      targetPort: 8081
+      targetPort: 80
       protocol: TCP
       name: http-port
   selector:
