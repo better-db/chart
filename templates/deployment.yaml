@@ -3,8 +3,6 @@ kind: Deployment
 metadata:
   name: {{ template "better-db.fullname" . }}
   labels:
-    something: else
-    and: more
     app: {{ template "better-db.name" . }}
     chart: {{ template "better-db.chart" . }}
     release: {{ .Release.Name }}
@@ -27,7 +25,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 80
               protocol: TCP
           livenessProbe:
             httpGet:
