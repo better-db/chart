@@ -6,10 +6,8 @@ replicaCount: 1
 
 image:
   repository: nginx
-  tag: 1.15.2
+  tag: 1.15.1
   pullPolicy: IfNotPresent
-
-logLevel: info
 
 service:
   type: ClusterIP
