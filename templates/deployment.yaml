@@ -35,9 +35,6 @@ spec:
             httpGet:
               path: /
               port: http
-          env:
-            - name: LOG_LEVEL
-              value: {{ .Values.logLevel }}
           securityContext:
             allowPrivilegeEscalation: {{ .Values.securityContext.allowPrivilegeEscalation }}
           resources:
